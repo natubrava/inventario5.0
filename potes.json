@@ -1,0 +1,2168 @@
+[
+  {
+    "codigo": "3",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "ACAFRAO/CURCUMA PO  KG"
+  },
+  {
+    "codigo": "4",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "ACUCAR COCO  KG"
+  },
+  {
+    "codigo": "5",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "ACUCAR MASCAVO (ESCURO)"
+  },
+  {
+    "codigo": "335",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "ACUCAR MASCAVO CLARO COLONIAL KG"
+  },
+  {
+    "codigo": "283",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "AGAR AGAR KG"
+  },
+  {
+    "codigo": "2",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ALBUMINA  KG"
+  },
+  {
+    "codigo": "216",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ALECRIM  KG"
+  },
+  {
+    "codigo": "8",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "ALHO CEBOLA E SALSA  KG"
+  },
+  {
+    "codigo": "284",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "ALHO FRITO GRAN. KG"
+  },
+  {
+    "codigo": "7",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "ALHO GRANULADO DESIDRATADO KG"
+  },
+  {
+    "codigo": "334",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ALHO PO KG"
+  },
+  {
+    "codigo": "9",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "AMARANTO FLOCOS KG"
+  },
+  {
+    "codigo": "11",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "AMEIXA SECA S/CAROCO KG"
+  },
+  {
+    "codigo": "13",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "AMENDOA DEFUMADA KG"
+  },
+  {
+    "codigo": "354",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "AMENDOA LAMINADA KG"
+  },
+  {
+    "codigo": "14",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "AMENDOA NATURAL  KG"
+  },
+  {
+    "codigo": "460",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "AMENDOA TORRADA (SEM SAL) KG"
+  },
+  {
+    "codigo": "285",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "AMENDOA TORRADA SALGADA KG"
+  },
+  {
+    "codigo": "15",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "AMENDOIM CEBOLA E SALSA   SNACK CROCKISSIMO"
+  },
+  {
+    "codigo": "16",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "AMENDOIM CROCANTE C/ SAL      SNACK CROCKISSIMO"
+  },
+  {
+    "codigo": "374",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "AMENDOIM DOCE KG"
+  },
+  {
+    "codigo": "17",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "AMENDOIM PIMENTA VERMELHA           SNACK CROCKISS"
+  },
+  {
+    "codigo": "18",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "AMENDOIM TORR C/SAL METADES KG"
+  },
+  {
+    "codigo": "31",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "AMENDOIM TORR S/ SAL METADES KG"
+  },
+  {
+    "codigo": "19",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "AMENDOIM TORRADO GRANULADO KG"
+  },
+  {
+    "codigo": "302",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ARGILA AMARELA  KG"
+  },
+  {
+    "codigo": "303",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ARGILA BRANCA KG"
+  },
+  {
+    "codigo": "304",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ARGILA CINZA KG"
+  },
+  {
+    "codigo": "305",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ARGILA PRETA KG"
+  },
+  {
+    "codigo": "309",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ARGILA VERDE KG"
+  },
+  {
+    "codigo": "306",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "ARGILA VERMELHA  KG"
+  },
+  {
+    "codigo": "42",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "AVEIA FLOCOS GROSSA  KG"
+  },
+  {
+    "codigo": "41",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "AVEIA FLOCOS MEDIA  KG"
+  },
+  {
+    "codigo": "341",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "BAMBOLE MEIO A MEIO  KG                   MAKROBOM"
+  },
+  {
+    "codigo": "44",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "BANANA PASSAS  KG"
+  },
+  {
+    "codigo": "23",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "BANANINHA 70% CHOC CACAU DIET - LA SALLE / (DONNA ASTA)"
+  },
+  {
+    "codigo": "229",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "BICARBONATO DE SODIO KG"
+  },
+  {
+    "codigo": "316",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "BISCOITO AMENDOIM S/ ACUCAR,GLUTEN,LACTOSE  (DONNA ASTA)"
+  },
+  {
+    "codigo": "372",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "BISCOITO CHOC 70% S/ ACUCAR,GLUTEN,LACTOSE (DONNA ASTA)"
+  },
+  {
+    "codigo": "453",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "BISCOITO CRAVO CANELA E CHOC FIBRATTO KG"
+  },
+  {
+    "codigo": "314",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "BISCOITO GERGELIM E LINHACA FIBRATTO"
+  },
+  {
+    "codigo": "503",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "BISCOITO GOTAS CHOCOLATE SEM GLUTEN S/ACUCAR KG (BRASILMIX)"
+  },
+  {
+    "codigo": "504",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "BISCOITO PISTACHE CHOC BRANCO SEM GLUTEN S/LACTOSE KG (BRASILMIX)"
+  },
+  {
+    "codigo": "451",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "BISCOITO QUEIJO PARMESÃO FIBRATTO KG"
+  },
+  {
+    "codigo": "45",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CACAU EM PO 100% PURO ALCALINO"
+  },
+  {
+    "codigo": "220",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CANELA EM CASCA  KG"
+  },
+  {
+    "codigo": "221",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CANELA EM PO PREMIUM  KG"
+  },
+  {
+    "codigo": "25",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CASADINHO DE GOIABA  - MAKROBON"
+  },
+  {
+    "codigo": "264",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CASQUINHA CHOCOLATE AO LEITE              MAKROBOM"
+  },
+  {
+    "codigo": "52",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "CASTANHA CAJU CARAMELIZADA C/GERGELIM KG"
+  },
+  {
+    "codigo": "55",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CASTANHA CAJU C/ SAL TORRADA W1"
+  },
+  {
+    "codigo": "56",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CASTANHA CAJU S/SAL TORRADA W1"
+  },
+  {
+    "codigo": "57",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CASTANHA PARA INTEIRA MEDIA"
+  },
+  {
+    "codigo": "58",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CASTANHA PARA PEDACOS  KG"
+  },
+  {
+    "codigo": "454",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CATUABA PO KG"
+  },
+  {
+    "codigo": "333",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CEBOLA CRISPY   KG"
+  },
+  {
+    "codigo": "289",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CEBOLA PO KG"
+  },
+  {
+    "codigo": "336",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CEBOLINHA DESIDRATADA  KG"
+  },
+  {
+    "codigo": "200",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHIMICHURRI COM PIMENTA  KG"
+  },
+  {
+    "codigo": "244",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHIMICHURRI S/ PIMENTA  KG"
+  },
+  {
+    "codigo": "348",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHIPS AIPIM CHURRASCO  KG           -    MULLER KG"
+  },
+  {
+    "codigo": "319",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHIPS BANANA SALG  KG (DA TERRA) (04/07/24 A PARTIR)"
+  },
+  {
+    "codigo": "410",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHIPS BATATA DOCE KG    -   MULLER"
+  },
+  {
+    "codigo": "233",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHIPS MANDIOCA/AIPIM KG      -    MULLER  KG"
+  },
+  {
+    "codigo": "190",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHOCOLATE EM PO 70%        \"\"CACAU\"\"\""
+  },
+  {
+    "codigo": "106",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "COCO CHIPS S/ ACUCAR BR FITA  KG"
+  },
+  {
+    "codigo": "107",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "COCO FLOCOS S ACUCAR  KG"
+  },
+  {
+    "codigo": "494",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "COCO QUEIMADO FLOCOS S/ ACUCAR KG"
+  },
+  {
+    "codigo": "259",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "COCO RALADO MEDIO S/ ACUCAR KG"
+  },
+  {
+    "codigo": "346",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "COENTRO GRAO KG"
+  },
+  {
+    "codigo": "245",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "COENTRO PO KG"
+  },
+  {
+    "codigo": "108",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "COLAGENO HIDROLISADO  KG"
+  },
+  {
+    "codigo": "214",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "COLORAU PREMIUM  KG"
+  },
+  {
+    "codigo": "321",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "COMINHO EM GRAO KG"
+  },
+  {
+    "codigo": "209",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "COMINHO MOIDO PURO  KG"
+  },
+  {
+    "codigo": "187",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "COOKIES AVELA E CACAU AVEIA S/LACTOSE - BESCO/HASI"
+  },
+  {
+    "codigo": "186",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "COOKIES AVEIA C/BANANA S/LACTOSE    -   BESCO/HASI"
+  },
+  {
+    "codigo": "332",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "COOKIES VEGANO AVEIA C/CHOC 70%  KG  -  BESCO/HASI"
+  },
+  {
+    "codigo": "109",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "CRANBERRY KG"
+  },
+  {
+    "codigo": "110",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CRAVO DA INDIA GRAO"
+  },
+  {
+    "codigo": "111",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CRAVO DA INDIA PO"
+  },
+  {
+    "codigo": "340",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CREATINA A GRANEL KG"
+  },
+  {
+    "codigo": "295",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CREME DE CEBOLA KG"
+  },
+  {
+    "codigo": "204",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "CURRY KG"
+  },
+  {
+    "codigo": "112",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "DAMASCO N.2  KG"
+  },
+  {
+    "codigo": "389",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "DISQUETI AO LEITE KG"
+  },
+  {
+    "codigo": "367",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "DRAGEA AMENDOIM CHOC AO LEITE       MAKROBOM"
+  },
+  {
+    "codigo": "421",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "DRAGEA UVA PASSA  CHOC AO LEITE MAKROBOM"
+  },
+  {
+    "codigo": "368",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "DRAGEA UVA PASSA 70% CACAU            MAKROBOM"
+  },
+  {
+    "codigo": "114",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "ERITRITOL CRISTAL A KG"
+  },
+  {
+    "codigo": "116",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARELO DE AVEIA  KG"
+  },
+  {
+    "codigo": "118",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "FARINHA  DE AMENDOIM KG"
+  },
+  {
+    "codigo": "363",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA BERINJELA KG"
+  },
+  {
+    "codigo": "117",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE AMENDOAS KG"
+  },
+  {
+    "codigo": "119",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE ARROZ BRANCA KG"
+  },
+  {
+    "codigo": "120",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE ARROZ INTEGRAL KG"
+  },
+  {
+    "codigo": "121",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE AVEIA  KG"
+  },
+  {
+    "codigo": "122",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE BANANA VERDE KG"
+  },
+  {
+    "codigo": "123",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE BATATA DOCE  KG"
+  },
+  {
+    "codigo": "471",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE BETERRABA KG"
+  },
+  {
+    "codigo": "325",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE CENTEIO KG"
+  },
+  {
+    "codigo": "126",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE COCO BRANCA KG"
+  },
+  {
+    "codigo": "127",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE GRAO DE BICO  KG"
+  },
+  {
+    "codigo": "128",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE LINHACA DOURADA"
+  },
+  {
+    "codigo": "132",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE TRIGO INTEGRAL KG"
+  },
+  {
+    "codigo": "444",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE TRIGO SARRACENO KG"
+  },
+  {
+    "codigo": "481",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FARINHA DE UVA KG"
+  },
+  {
+    "codigo": "278",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "FECULA DE BATATA  KG"
+  },
+  {
+    "codigo": "276",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "FRUTAS CRISTALIZADAS KG"
+  },
+  {
+    "codigo": "136",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GELATINA PO SEM SABOR INCOLOR KG"
+  },
+  {
+    "codigo": "205",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GENGIBRE PO   KG"
+  },
+  {
+    "codigo": "401",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "GENGIBRE RASURADO KG"
+  },
+  {
+    "codigo": "139",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "GERGELIM PRETO IMPORTADO KG"
+  },
+  {
+    "codigo": "137",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "GERGELIM S/ CASCA CLARO KG"
+  },
+  {
+    "codigo": "350",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "GINSENG PO KG"
+  },
+  {
+    "codigo": "141",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GOMA XANTANA  KG"
+  },
+  {
+    "codigo": "390",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "GOMETS GOMAS SORTIDAS KG"
+  },
+  {
+    "codigo": "469",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "GOMETS MINHOCAS ACIDAS DORI KG"
+  },
+  {
+    "codigo": "195",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GOTAS CHOCOLATE AO LEITE GRANEL KG"
+  },
+  {
+    "codigo": "191",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GOTAS CHOCOLATE BRANCO KG"
+  },
+  {
+    "codigo": "192",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GOTAS CHOCOLATE MEIO AMARGO  KG"
+  },
+  {
+    "codigo": "143",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "GRANOLA C/ACUCAR MASCAVO"
+  },
+  {
+    "codigo": "497",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "GRANOLA C/FRUTAS VERMELHAS C/ACUCAR MASC"
+  },
+  {
+    "codigo": "438",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "GRANOLA CACAU KG"
+  },
+  {
+    "codigo": "142",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "GRANOLA S/ACUCAR"
+  },
+  {
+    "codigo": "329",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "GRANOLA SALGADA  KG"
+  },
+  {
+    "codigo": "144",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GRAO DE BICO 9MM KG"
+  },
+  {
+    "codigo": "496",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "GRAO DE BICO TORR. C/ SAL  (SNACK) KG"
+  },
+  {
+    "codigo": "145",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "GUARANA EM PO KG"
+  },
+  {
+    "codigo": "146",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "LEITE DE COCO EM PO  KG"
+  },
+  {
+    "codigo": "414",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "LENTILHA CANADENSE KG"
+  },
+  {
+    "codigo": "147",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "LEVEDO DE CERVEJA  KG"
+  },
+  {
+    "codigo": "413",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "LEVEDURA NUTRICIONAL FLOCOS KG"
+  },
+  {
+    "codigo": "168",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "LINHACA DOURADA KG"
+  },
+  {
+    "codigo": "169",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "LINHACA MARROM KG"
+  },
+  {
+    "codigo": "222",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "LOURO FOLHA  KG"
+  },
+  {
+    "codigo": "279",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "MACA DESIDRATADA FATIADA   KG"
+  },
+  {
+    "codigo": "148",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "MILHO TOR MOSTARDA MEL KG"
+  },
+  {
+    "codigo": "466",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "VEGETAIS CHIPS MIX KG (BATATA, CENOURA, ERVILHA, BATATA DOCE, VARGEM, ABOBORA)"
+  },
+  {
+    "codigo": "353",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "MIX FRUTAS SECAS DESIDRATADAS KG"
+  },
+  {
+    "codigo": "208",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "MOSTARDA AMARELA PO KG"
+  },
+  {
+    "codigo": "470",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "NIBS DE CACAU KG"
+  },
+  {
+    "codigo": "318",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "NOZ MOSCADA BOLA  KG"
+  },
+  {
+    "codigo": "223",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "NOZ MOSCADA PO  KG"
+  },
+  {
+    "codigo": "149",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "NOZES CHILENAS INTEIRA  KG"
+  },
+  {
+    "codigo": "150",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "NOZES CHILENAS PEDACOS KG"
+  },
+  {
+    "codigo": "27",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PALITO DE CHOCOLATE         MAKROBOM"
+  },
+  {
+    "codigo": "26",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PAO DE MEL C/ CHOCOLATE KG   MAKROBOM"
+  },
+  {
+    "codigo": "151",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "PAPRICA DEFUMADA  KG"
+  },
+  {
+    "codigo": "201",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "PAPRICA DOCE  KG"
+  },
+  {
+    "codigo": "202",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "PAPRICA PICANTE  KG"
+  },
+  {
+    "codigo": "152",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "PEPITA DE GIRASSOL  KG"
+  },
+  {
+    "codigo": "349",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA BRANCA PO KG"
+  },
+  {
+    "codigo": "430",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA CAIENA PO KG"
+  },
+  {
+    "codigo": "206",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA CALABRESA FLOCOS KG"
+  },
+  {
+    "codigo": "153",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA CALABRESA PO  KG"
+  },
+  {
+    "codigo": "461",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA CHILLI PO KG"
+  },
+  {
+    "codigo": "203",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA EM GRAO PRETA  KG"
+  },
+  {
+    "codigo": "154",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA MIX GRAO KG"
+  },
+  {
+    "codigo": "246",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA PRETA PO   KG"
+  },
+  {
+    "codigo": "261",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PIMENTA ROSA GRAO KG"
+  },
+  {
+    "codigo": "156",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "POLVILHO AZEDO KG"
+  },
+  {
+    "codigo": "157",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "POLVILHO DOCE (FECULA MANDIOCA) KG"
+  },
+  {
+    "codigo": "159",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "PROTEINA SOJA CLARA - GRANULADA  KG"
+  },
+  {
+    "codigo": "158",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "PROTEINA SOJA ESCURA GRANULADA KG"
+  },
+  {
+    "codigo": "161",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "PSYLLIUM HUSK  KG"
+  },
+  {
+    "codigo": "162",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "QUINOA FLOCOS  KG"
+  },
+  {
+    "codigo": "163",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "QUINOA GRAO BRANCA  KG"
+  },
+  {
+    "codigo": "164",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "QUINOA GRAO MIX"
+  },
+  {
+    "codigo": "165",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "SAL ROSA FINO  KG                         HIMALAIA"
+  },
+  {
+    "codigo": "207",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "SALSINHA VERDE DESIDRATADA  KG"
+  },
+  {
+    "codigo": "167",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "SEMENTE ABOBORA AA S/CASCA NATURAL  KG"
+  },
+  {
+    "codigo": "235",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "SEMENTE CHIA PREMIUM  KG"
+  },
+  {
+    "codigo": "327",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "SPIRULINA PO  KG"
+  },
+  {
+    "codigo": "171",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "SUCRILHOS C/ACUCAR  KG"
+  },
+  {
+    "codigo": "175",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "SUCRILHOS CHOCO BOLL KG"
+  },
+  {
+    "codigo": "173",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "SUCRILHOS FRUIT RINGS  KG"
+  },
+  {
+    "codigo": "338",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "SUCRILHOS LEITE CONDENSADO"
+  },
+  {
+    "codigo": "172",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "SUCRILHOS S/ACUCAR KG"
+  },
+  {
+    "codigo": "446",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "TAMARA JUMBO COM CAROCO KG"
+  },
+  {
+    "codigo": "262",
+    "letra": "C",
+    "tara": 0.322,
+    "Nome": "TAMARAS SEM CAROCO KG"
+  },
+  {
+    "codigo": "176",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "TEMPERO ANA MARIA   KG"
+  },
+  {
+    "codigo": "299",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "TEMPERO BAIANO KG"
+  },
+  {
+    "codigo": "408",
+    "letra": "A",
+    "tara": 0.258,
+    "Nome": "TEMPERO DO CHEFE COM CURRY KG"
+  },
+  {
+    "codigo": "178",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "TEMPERO EDU GUEDES  KG"
+  },
+  {
+    "codigo": "177",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "TEMPERO LEMON PEPPER KG"
+  },
+  {
+    "codigo": "21",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "TORRADA SABOR ALHO     LA SALLE / MAKROBOM"
+  },
+  {
+    "codigo": "180",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "TRIBULUS PO   KG"
+  },
+  {
+    "codigo": "800",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "UVA PASSAS  BRANCA  S/ SEM  KG"
+  },
+  {
+    "codigo": "183",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "VINAGRETE KG"
+  },
+  {
+    "codigo": "184",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "XILITOL CRISTAL A  KG"
+  },
+  {
+    "codigo": "60",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHA AMORA BRANCA  KG"
+  },
+  {
+    "codigo": "61",
+    "letra": "D",
+    "tara": 0.586,
+    "Nome": "CHA ANIS ESTRELADO KG"
+  },
+  {
+    "codigo": "67",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHA CAMOMILA KG"
+  },
+  {
+    "codigo": "69",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA CAPIM LIMAO / CAPIM CIDREIRA"
+  },
+  {
+    "codigo": "343",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA CARDO MARIANO (SILIMARINA) KG"
+  },
+  {
+    "codigo": "70",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA CARQUEJA  AMARGA"
+  },
+  {
+    "codigo": "243",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA CAVALINHA KG"
+  },
+  {
+    "codigo": "75",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA DENTE DE LEAO  KG"
+  },
+  {
+    "codigo": "231",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA ESPINHEIRA SANTA  KG"
+  },
+  {
+    "codigo": "83",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHA FLOR DE HIBISCO KG"
+  },
+  {
+    "codigo": "82",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA GUACO FOLHA KG"
+  },
+  {
+    "codigo": "230",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA MALVA FOLHA  KG"
+  },
+  {
+    "codigo": "90",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA MULUNGU RASURADO  KG"
+  },
+  {
+    "codigo": "94",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA PICAO PLANTA  KG"
+  },
+  {
+    "codigo": "97",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA QUEBRA PEDRA KG"
+  },
+  {
+    "codigo": "166",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA SALVIA FOLHAS DESIDRATADA"
+  },
+  {
+    "codigo": "98",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA SENE FOLHAS  KG"
+  },
+  {
+    "codigo": "100",
+    "letra": "B",
+    "tara": 0.41,
+    "Nome": "CHA TANCHAGEM KG"
+  },
+  {
+    "codigo": "105",
+    "letra": "E",
+    "tara": 0.75,
+    "Nome": "CHA VERDE FOLHAS IMPORTADO KG"
+  },
+  {
+    "codigo": "6",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ALHO FLOCOS KG"
+  },
+  {
+    "codigo": "22",
+    "letra": "",
+    "tara": 0,
+    "Nome": "TORRADA DE PIZZA  -  LA SALLE / MAKROBOM"
+  },
+  {
+    "codigo": "24",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHOCOLATE BARRA 70% CACAU S/ACUCAR  LA SALLE"
+  },
+  {
+    "codigo": "30",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BISCOITO AMANTEIGADO COCO  KG"
+  },
+  {
+    "codigo": "32",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ARROZ AGULHA INTEGRAL"
+  },
+  {
+    "codigo": "33",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ARROZ CATETO INTEGRAL KG"
+  },
+  {
+    "codigo": "34",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ARROZ INTEGRAL"
+  },
+  {
+    "codigo": "40",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ARROZ PRETO KG"
+  },
+  {
+    "codigo": "43",
+    "letra": "",
+    "tara": 0,
+    "Nome": "AVELA S/CASCA"
+  },
+  {
+    "codigo": "46",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CALDO DE BACON KG"
+  },
+  {
+    "codigo": "48",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CALDO DE GALINHA  KG"
+  },
+  {
+    "codigo": "49",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CALDO DE LEGUMES  KG"
+  },
+  {
+    "codigo": "54",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CASTANHA CAJU NATURAL (CRUA) INTEIRA KG"
+  },
+  {
+    "codigo": "62",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA AROEIRA KG"
+  },
+  {
+    "codigo": "63",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA BARBATIMAO KG"
+  },
+  {
+    "codigo": "64",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA BOLDO CHILENO"
+  },
+  {
+    "codigo": "65",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA BRANCO"
+  },
+  {
+    "codigo": "66",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA CABELO DE MILHO"
+  },
+  {
+    "codigo": "68",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA CANELA DE VELHO  KG"
+  },
+  {
+    "codigo": "72",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA CENTELLA  ASIATICA FOLHA"
+  },
+  {
+    "codigo": "73",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA CHAPEU DE COURO"
+  },
+  {
+    "codigo": "74",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA CIPO MIL HOMENS"
+  },
+  {
+    "codigo": "76",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ENDRO"
+  },
+  {
+    "codigo": "77",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ERVA BALEEIRA"
+  },
+  {
+    "codigo": "78",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ERVA CIDREIRA  KG"
+  },
+  {
+    "codigo": "79",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ERVA DOCE  KG"
+  },
+  {
+    "codigo": "80",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ERVA DE SAO JOAO"
+  },
+  {
+    "codigo": "81",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA FUNCHO  KG"
+  },
+  {
+    "codigo": "84",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA IPE ROXO CASCA"
+  },
+  {
+    "codigo": "85",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA JAMBOLAO FOLHA"
+  },
+  {
+    "codigo": "86",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA LOSNA FOLHAS"
+  },
+  {
+    "codigo": "87",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA MACELA KG"
+  },
+  {
+    "codigo": "88",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA MELISSA  KG"
+  },
+  {
+    "codigo": "89",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA FOLHAS MORINGA KG"
+  },
+  {
+    "codigo": "91",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA OLIVEIRA FOLHA  KG"
+  },
+  {
+    "codigo": "92",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA MARACUJA PASSIFLORA"
+  },
+  {
+    "codigo": "93",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA PATA DE VACA"
+  },
+  {
+    "codigo": "95",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA POEJO"
+  },
+  {
+    "codigo": "96",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA PRETO IMPORTADO KG"
+  },
+  {
+    "codigo": "99",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA SUCUPIRA SEMENTES KG"
+  },
+  {
+    "codigo": "101",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA UNHA DE GATO KG"
+  },
+  {
+    "codigo": "102",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA UVA URSI"
+  },
+  {
+    "codigo": "103",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA UXI AMARELO RASURADO"
+  },
+  {
+    "codigo": "104",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA VALERIANA RAIZ  KG"
+  },
+  {
+    "codigo": "130",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MACA PERUANA PO  KG"
+  },
+  {
+    "codigo": "131",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FARINHA DE MARACUJA  KG"
+  },
+  {
+    "codigo": "133",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FEIJAO BRANCO ARGENTINO HASI  1KG"
+  },
+  {
+    "codigo": "135",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FUNGHI SECCHI"
+  },
+  {
+    "codigo": "140",
+    "letra": "",
+    "tara": 0,
+    "Nome": "GOJI BERRY KG"
+  },
+  {
+    "codigo": "155",
+    "letra": "",
+    "tara": 0,
+    "Nome": "POLEN KG"
+  },
+  {
+    "codigo": "160",
+    "letra": "",
+    "tara": 0,
+    "Nome": "PROTEINA SOJA GRAUDA CLARA"
+  },
+  {
+    "codigo": "170",
+    "letra": "",
+    "tara": 0,
+    "Nome": "SOJA EM GRAOS KG"
+  },
+  {
+    "codigo": "181",
+    "letra": "",
+    "tara": 0,
+    "Nome": "TRIGO EM GRAO KG"
+  },
+  {
+    "codigo": "182",
+    "letra": "",
+    "tara": 0,
+    "Nome": "UVA PASSAS PRETA  S/ SEM  KG"
+  },
+  {
+    "codigo": "185",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ZIMBRO KG"
+  },
+  {
+    "codigo": "189",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHOCOLATE EM PO 50%    \"\"CACAU\"\"\""
+  },
+  {
+    "codigo": "196",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ERVILHA TOR C/WASABI KG"
+  },
+  {
+    "codigo": "197",
+    "letra": "",
+    "tara": 0,
+    "Nome": "DOLOMITA  KG"
+  },
+  {
+    "codigo": "210",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ERVAS FINAS KG"
+  },
+  {
+    "codigo": "211",
+    "letra": "",
+    "tara": 0,
+    "Nome": "OREGANO FLOCOS  KG"
+  },
+  {
+    "codigo": "212",
+    "letra": "",
+    "tara": 0,
+    "Nome": "LOURO EM PO KG"
+  },
+  {
+    "codigo": "213",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MANJERICAO FLOCOS KG"
+  },
+  {
+    "codigo": "215",
+    "letra": "",
+    "tara": 0,
+    "Nome": "TOMILHO KG"
+  },
+  {
+    "codigo": "232",
+    "letra": "",
+    "tara": 0,
+    "Nome": "GERMEM DE TRIGO (CRU)"
+  },
+  {
+    "codigo": "242",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ALCACHOFRA FOLHA  KG"
+  },
+  {
+    "codigo": "249",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA PEDRA UME INSULINA FOLHA KG"
+  },
+  {
+    "codigo": "250",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA SETE SANGRIAS"
+  },
+  {
+    "codigo": "251",
+    "letra": "",
+    "tara": 0,
+    "Nome": "SEMENTE ABOBORA TOR/SALG   KG"
+  },
+  {
+    "codigo": "255",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ALFAVACA DESIDRATADA KG"
+  },
+  {
+    "codigo": "256",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA GRAVIOLA FOLHA"
+  },
+  {
+    "codigo": "257",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA HORTELA  KG"
+  },
+  {
+    "codigo": "258",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA MATE TOSTADO KG"
+  },
+  {
+    "codigo": "260",
+    "letra": "",
+    "tara": 0,
+    "Nome": "LARANJA FATIADA DESIDRATADA KG"
+  },
+  {
+    "codigo": "265",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA BUCHINHA DO NORTE"
+  },
+  {
+    "codigo": "268",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ROMA KG"
+  },
+  {
+    "codigo": "286",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FUMACA EM PO KG"
+  },
+  {
+    "codigo": "288",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MANJERONA FLOCOS KG"
+  },
+  {
+    "codigo": "290",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CEBOLA FLOCOS"
+  },
+  {
+    "codigo": "291",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ERVA DE BICHO"
+  },
+  {
+    "codigo": "292",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA PAU TENENTE"
+  },
+  {
+    "codigo": "293",
+    "letra": "",
+    "tara": 0,
+    "Nome": "SAL MARINHO REFINADO KG"
+  },
+  {
+    "codigo": "294",
+    "letra": "",
+    "tara": 0,
+    "Nome": "GERGELIM TORRADO C/ CASCA BRANCO KG"
+  },
+  {
+    "codigo": "296",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ACUCAR BAUNILHA KG"
+  },
+  {
+    "codigo": "310",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA EUCALIPTO FOLHAS"
+  },
+  {
+    "codigo": "317",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA CALENDULA  KG"
+  },
+  {
+    "codigo": "320",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CARDAMOMO  KG"
+  },
+  {
+    "codigo": "324",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ASSA PEIXE  KG"
+  },
+  {
+    "codigo": "326",
+    "letra": "",
+    "tara": 0,
+    "Nome": "LOURO FOLHA              (PACOTES)"
+  },
+  {
+    "codigo": "330",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA BUGRE / PORANGABA"
+  },
+  {
+    "codigo": "337",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FARINHA PANKO KG"
+  },
+  {
+    "codigo": "342",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ARNICA   KG"
+  },
+  {
+    "codigo": "344",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA GINKGO BILOBA  KG"
+  },
+  {
+    "codigo": "352",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MIX NUTS SAUDAVEL  SB  KG"
+  },
+  {
+    "codigo": "358",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ZAATAR (ZATTAR) TEMPERO KG"
+  },
+  {
+    "codigo": "361",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA CANA DO BREJO KG"
+  },
+  {
+    "codigo": "366",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FIBRA DE MACA  KG"
+  },
+  {
+    "codigo": "370",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FLOCOS DE ARROZ  KG"
+  },
+  {
+    "codigo": "371",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MOSTARDA AMARELA GRAO KG"
+  },
+  {
+    "codigo": "378",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ESPECIARIAS CHIMARRAO KG"
+  },
+  {
+    "codigo": "379",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA MASTRUZ / ERVA SANTA MARIA KG"
+  },
+  {
+    "codigo": "381",
+    "letra": "",
+    "tara": 0,
+    "Nome": "STEVIA FOLHA KG"
+  },
+  {
+    "codigo": "384",
+    "letra": "",
+    "tara": 0,
+    "Nome": "NOZ PECAN INTEIRA  KG"
+  },
+  {
+    "codigo": "388",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA LAVANDA ALFAZEMA AZUL KG (LAVANDULA OFF)"
+  },
+  {
+    "codigo": "391",
+    "letra": "",
+    "tara": 0,
+    "Nome": "PISTACHE CRU S/CASCA KG"
+  },
+  {
+    "codigo": "394",
+    "letra": "",
+    "tara": 0,
+    "Nome": "TORRAO DE GERGELIM BARRA SNACK KG"
+  },
+  {
+    "codigo": "395",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA FENO GREGO SEMENTES KG"
+  },
+  {
+    "codigo": "396",
+    "letra": "",
+    "tara": 0,
+    "Nome": "COGUMELO SHITAKE KG"
+  },
+  {
+    "codigo": "398",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CALDO DE CAMARAO  KG"
+  },
+  {
+    "codigo": "404",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA URTIGA RASURADA KG"
+  },
+  {
+    "codigo": "411",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA SALSAPARRILHA  KG"
+  },
+  {
+    "codigo": "434",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA SLIM KG"
+  },
+  {
+    "codigo": "439",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ARRUDA  KG"
+  },
+  {
+    "codigo": "440",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CASADINHO VEGANO CACAU BLACK CHOC BRANCO (CASAS DO VALLE)"
+  },
+  {
+    "codigo": "441",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CASADINHO VEGANO WHITE CHOC 70%  (CASAS DO VALLE)"
+  },
+  {
+    "codigo": "445",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CACAU EM PO NATURAL 100% KG"
+  },
+  {
+    "codigo": "458",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BISCOITO VEGANO CACAU BLACK S/ GLUTEN,LACTOSE (CASAS DO VALLE)"
+  },
+  {
+    "codigo": "465",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ARTEMISIA KG"
+  },
+  {
+    "codigo": "473",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA BARDANA KG"
+  },
+  {
+    "codigo": "478",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CASTANHA CAJU PEDACOS W4 TORR "
+  },
+  {
+    "codigo": "482",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BISCOITO CENOURA E CHOCOLATE FIBRATTO KG"
+  },
+  {
+    "codigo": "483",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA ALCACUZ KG"
+  },
+  {
+    "codigo": "487",
+    "letra": "",
+    "tara": 0,
+    "Nome": "TEMPERO PEGA MARIDO KG"
+  },
+  {
+    "codigo": "488",
+    "letra": "",
+    "tara": 0,
+    "Nome": "LIMAO FATIADO DESIDRATADO (THAITI) KG"
+  },
+  {
+    "codigo": "491",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BISCOITO COCO S/ GLUTEN,LACTOSE (DONNA ASTA)"
+  },
+  {
+    "codigo": "492",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BALA DE BANANA ZERO ACUCAR (LEAF) LA SALLE "
+  },
+  {
+    "codigo": "493",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BALA DE BANANA C/ ACUCAR  (LEAF) LA SALLE "
+  },
+  {
+    "codigo": "498",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHA MAO DE DEUS KG"
+  },
+  {
+    "codigo": "499",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MORINGA PO KG"
+  },
+  {
+    "codigo": "501",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ARROZ 8 GRAOS KG"
+  },
+  {
+    "codigo": "507",
+    "letra": "",
+    "tara": 0,
+    "Nome": "SNACK COCO C/ AMENDOAS, SEM GLUTEN/LACTOSE/,S/ACUCAR KG (BRASILMIX)"
+  },
+  {
+    "codigo": "515",
+    "letra": "",
+    "tara": 0,
+    "Nome": "PIMENTA BRANCA GRAO KG"
+  },
+  {
+    "codigo": "516",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CALDO DE CARNE KG"
+  },
+  {
+    "codigo": "517",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BISCOITO QUINOA BIS PRETO SEM GLUTEN/LACTOSE/,S/ACUCAR KG (BRASILMIX)"
+  },
+  {
+    "codigo": "518",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHIPS BATATA DOCE P. DEFUMADA KG    -   SR. BANANA"
+  },
+  {
+    "codigo": "519",
+    "letra": "",
+    "tara": 0,
+    "Nome": "BISCOITO COCO SEM ACUCAR DIET S/GLUTEN, LACTOSE, (CASAS DO VALLE)"
+  },
+  {
+    "codigo": "520",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHIPS BANANA C/ CANELA  KG (DA TERRA) "
+  },
+  {
+    "codigo": "523",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ARROZ BASMATI KG"
+  },
+  {
+    "codigo": "524",
+    "letra": "",
+    "tara": 0,
+    "Nome": "CHIPS BATATA INGLESA C/ SAL KG    -   SR. BANANA"
+  },
+  {
+    "codigo": "1524",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FLOR DE SAL PCTE 500G HASI"
+  },
+  {
+    "codigo": "1622",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FLOR DE SAL PCTE 100G HASI"
+  },
+  {
+    "codigo": "1641",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MASSA TAPIOCA 500G DA BRANCA"
+  },
+  {
+    "codigo": "2003",
+    "letra": "",
+    "tara": 0,
+    "Nome": "TRIGO P/KIBE 500G"
+  },
+  {
+    "codigo": "2023",
+    "letra": "",
+    "tara": 0,
+    "Nome": "FEIJAO MOYASHI  500GR"
+  },
+  {
+    "codigo": "2357",
+    "letra": "",
+    "tara": 0,
+    "Nome": "TAHINE ISTAMBUL 200G LATA"
+  },
+  {
+    "codigo": "2368",
+    "letra": "",
+    "tara": 0,
+    "Nome": "MASSA TAPIOCA  500G AMAFIL"
+  },
+  {
+    "codigo": "2463",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ESSENCIA ARCOLOR BAUNILHA 30ML"
+  },
+  {
+    "codigo": "2975",
+    "letra": "",
+    "tara": 0,
+    "Nome": "PIPOCA  PREMIUM 500G"
+  },
+  {
+    "codigo": "2982",
+    "letra": "",
+    "tara": 0,
+    "Nome": "LENTILHA ROSA HASI 500G"
+  },
+  {
+    "codigo": "3097",
+    "letra": "",
+    "tara": 0,
+    "Nome": "AGUA DE COCO VITCOCO 200ML"
+  },
+  {
+    "codigo": "3221",
+    "letra": "",
+    "tara": 0,
+    "Nome": "PIMENTAO VERMELHO FLOCOS KG"
+  },
+  {
+    "codigo": "1051888",
+    "letra": "",
+    "tara": 0,
+    "Nome": "ARROZ PRETO HASI 500G"
+  }
+]
