@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#4A90E2">
-  <title>Contador de Inventário Granel</title>
+  <title>Contador Inventário</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet"
@@ -14,199 +14,269 @@
   <link rel="manifest" href="manifest.json">
 
   <style>
-    /* Estilos (mantidos da versão anterior) */
+    /* Compactação Geral */
+    body { font-size: 0.95rem; }
+    
     @keyframes flash{0%,100%{background:initial}50%{background:#a7f3d0}}
     .flash-success{animation:flash .5s}
     @keyframes flash-error{0%,100%{background:initial}50%{background:#fecaca}}
     .flash-error{animation:flash-error .7s}
 
-    #listaItensTable{width:100%;table-layout:auto;font-size:.9rem}
-    #listaItensTable th,#listaItensTable td{padding:4px 2px; border:1px solid #e5e7eb; word-wrap: break-word; text-align: center;}
+    /* Tabela Compacta */
+    #listaItensTable{width:100%;table-layout:auto;font-size:.85rem}
+    #listaItensTable th,#listaItensTable td{padding:3px 2px; border:1px solid #e5e7eb; word-wrap: break-word; text-align: center;}
     #listaItensTable th:first-child, #listaItensTable td:first-child { text-align: left; padding-left: 4px;}
     #listaItensTable td:nth-child(2), #listaItensTable td:nth-child(3) { text-align: right; padding-right: 4px;}
 
-    @media (min-width: 640px) { /* sm: */
-      #listaItensTable th,#listaItensTable td{padding:6px 4px;}
+    #installPwaButton{display:none}
+
+    /* BOTÕES DE TARA COM FOTO */
+    .tara-button {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      margin: 2px;
+      border: 2px solid #e5e7eb;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #fff;
+      overflow: hidden;
+      padding: 0;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Estado Selecionado */
+    .tara-button.selected {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
     }
 
-    #installPwaButton{display:none}
-    .tara-button{padding:.5rem .75rem; border: 1px solid #ccc; border-radius: 0.25rem; margin: 0.25rem; cursor: pointer; background-color: #f9f9f9; transition: background-color 0.2s ease, border-color 0.2s ease;}
-    .tara-button.selected{background-color: #60a5fa; color: white; border-color: #2563eb; font-weight: bold;}
-    .tara-button:hover:not(.selected){background-color: #e5e5e5;}
+    /* Checkmark sobre a foto */
+    .check-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(37, 99, 235, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.1s;
+    }
+    .tara-button.selected .check-overlay {
+      opacity: 1;
+    }
 
-    .status-base { padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 0.25rem; color: white; text-align: center; font-weight: bold; display: none; }
+    /* Botão Nenhuma (Texto) */
+    .tara-button-text {
+      width: auto;
+      height: 40px;
+      padding: 0 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #4b5563;
+    }
+    .tara-button-text.selected {
+      background-color: #60a5fa;
+      color: white;
+      border-color: #2563eb;
+    }
+
+    /* Status e Modais */
+    .status-base { padding: 0.4rem 0.8rem; margin-top: 0.5rem; border-radius: 0.25rem; color: white; text-align: center; font-weight: bold; display: none; font-size: 0.9rem; }
     .status-info { background-color: #6b7280; }
     .status-success { background-color: #10b981; }
     .status-error { background-color: #ef4444; }
     .status-sending { background-color: #3b82f6; }
 
     .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 999; display: none;}
-    .modal-content { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 2rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000; width: 90%; max-width: 400px; display: none;}
+    .modal-content { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000; width: 90%; max-width: 350px; display: none;}
     .modal-overlay.active, .modal-content.active { display: block; }
     .modal-close-button { position: absolute; top: 0.5rem; right: 0.75rem; font-size: 1.5rem; color: #6b7280; cursor: pointer; background: none; border: none;}
-    .modal-close-button:hover { color: #ef4444; }
 
     .input-auto-filled { background-color: #eff6ff; border-color: #93c5fd; }
 
-    #progressBarContainer { width: 100%; background-color: #e5e7eb; border-radius: 0.25rem; overflow: hidden; margin-top: 0.5rem; height: 10px; display: none;}
+    #progressBarContainer { width: 100%; background-color: #e5e7eb; border-radius: 0.25rem; overflow: hidden; margin-top: 0.5rem; height: 8px; display: none;}
     #progressBar { width: 0%; height: 100%; background-color: #22c55e; transition: width 0.3s ease-in-out;}
 
-    .form-group { border: 1px solid #e5e7eb; padding: 1rem; border-radius: 0.375rem; margin-bottom: 1rem; }
-    .form-group-title { font-weight: 600; color: #4b5563; margin-bottom: 0.75rem; display: block; font-size: 1.1rem;}
+    /* Form Layout Compacto */
+    .form-group { border: 1px solid #e5e7eb; padding: 0.5rem; border-radius: 0.375rem; margin-bottom: 0.5rem; background-color: #fcfcfc; }
+    .form-group-title { font-weight: 700; color: #374151; margin-bottom: 0.25rem; display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;}
+    
+    .input-compact { padding: 0.35rem 0.5rem; font-size: 1rem; }
+    .label-compact { font-size: 0.8rem; margin-bottom: 1px; }
 
     .input-error { border-color: #ef4444 !important; }
-    .error-message { color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem; display: block; min-height: 1rem; }
+    .error-message { color: #ef4444; font-size: 0.7rem; margin-top: 1px; display: block; min-height: 0.8rem; }
 
     @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; transform: scale(0.95); } }
     .fade-out { animation: fadeOut 0.3s ease-out forwards; }
 
     .item-status-icon { margin-left: 5px; }
-    #nomeProdutoDisplay { margin-top: 0.25rem; padding: 0.5rem 0.75rem; background-color: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 0.25rem; font-style: italic; color: #4b5563; min-height: 2.5rem; display: flex; align-items: center; }
+    #nomeProdutoDisplay { margin-top: 0.25rem; padding: 0.25rem 0.5rem; background-color: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 0.25rem; font-style: italic; color: #4b5563; min-height: 2rem; display: flex; align-items: center; font-size: 0.9rem; line-height: 1.1;}
     #nomeProdutoDisplay:empty::before { content: "-"; color: #9ca3af; }
     .item-enviado { background-color: #dcfce7; }
     .item-falha { background-color: #fee2e2; }
 
-    /* Estilo para o brilho neon no campo Peso Extra Estoque */
+    /* Brilho Neon para Estoque */
     .input-neon-glow {
-      border: 1px solid #fcd34d; /* Tailwind yellow-300 */
-      box-shadow: 0 0 5px rgba(252, 211, 77, 0.5), 0 0 8px rgba(252, 211, 77, 0.3); /* Sombra suave amarela */
-      transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      border: 1px solid #fcd34d; 
+      box-shadow: 0 0 3px rgba(252, 211, 77, 0.5);
+      transition: box-shadow 0.3s;
     }
     .input-neon-glow:focus {
-      border-color: #fbbf24; /* Tailwind amber-400 (um pouco mais forte) */
-      box-shadow: 0 0 8px rgba(251, 191, 36, 0.7), 0 0 12px rgba(251, 191, 36, 0.5); /* Sombra amarela/ambar mais intensa no foco */
-      outline: none; /* Remove o outline padrão do browser, pois já temos o brilho */
+      border-color: #fbbf24;
+      box-shadow: 0 0 6px rgba(251, 191, 36, 0.7);
+      outline: none;
     }
     
     .estoque-label { font-size: 0.7rem; text-transform: uppercase; color: #6b7280; margin-right: 4px; }
   </style>
 </head>
-<body class="bg-gray-100 p-2 sm:p-4 font-sans">
+<body class="bg-gray-50 p-1 sm:p-2 font-sans">
 
   <div id="overlayNomeUsuario" class="modal-overlay"></div>
   <div id="modalNomeUsuario" class="modal-content">
     <button id="closeModalNomeBtn" class="modal-close-button" title="Fechar">&times;</button>
-    <h2 class="text-xl font-semibold mb-4">Nome do Usuário</h2>
-    <p class="text-sm text-gray-600 mb-4">Digite seu nome para identificar os registros:</p>
+    <h2 class="text-lg font-semibold mb-3">Nome do Usuário</h2>
     <input type="text" id="inputNomeUsuario" placeholder="Seu nome"
-           class="w-full border border-gray-300 p-2 rounded mb-4" enterkeyhint="done">
+           class="w-full border border-gray-300 p-2 rounded mb-2 text-sm" enterkeyhint="done">
     <div id="inputNomeUsuarioError" class="error-message mb-2"></div>
-    <button id="salvarNomeUsuarioBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
-      Salvar Nome
+    <button id="salvarNomeUsuarioBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded text-sm font-bold">
+      Salvar
     </button>
   </div>
 
-  <div class="container mx-auto max-w-3xl bg-white p-4 sm:p-6 rounded shadow-md">
+  <div class="container mx-auto max-w-3xl bg-white p-2 sm:p-4 rounded shadow-sm">
 
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-2xl font-bold text-gray-800">Inventário Granel</h1>
-      <button id="installPwaButton" class="bg-green-500 hover:bg-green-600 text-white text-sm py-1 px-3 rounded">
-        <i class="fas fa-download mr-1"></i> Instalar App
+    <!-- Header Compacto -->
+    <div class="flex justify-between items-center mb-2">
+      <h1 class="text-lg font-bold text-gray-800 leading-tight">Inventário Granel</h1>
+      <button id="installPwaButton" class="bg-green-500 hover:bg-green-600 text-white text-xs py-1 px-2 rounded">
+        <i class="fas fa-download"></i> Instalar
       </button>
     </div>
-    <p id="nomeUsuarioDisplay" class="text-gray-700 mb-6 cursor-pointer hover:text-blue-600">Carregando usuário...</p>
-
-    <div class="form-group">
-      <span class="form-group-title">Detalhes do Produto</span>
-      <div>
-        <!-- LAYOUT ALTERADO: Estoque do Sistema alinhado com o Label -->
-        <div class="flex justify-between items-end mb-1">
-            <label for="codigoProduto" class="block text-sm font-medium text-gray-700">Código do Produto</label>
-            <div id="estoqueSistemaContainer" class="hidden bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
-                <span class="estoque-label">EstoqAtual:</span>
-                <span id="estoqueSistemaDisplay" class="text-sm font-bold text-blue-700">--</span>
-            </div>
-        </div>
-        
-        <input type="text" id="codigoProduto" placeholder="Código"
-               class="mt-1 block w-full border border-gray-300 p-2 rounded" enterkeyhint="next">
-        <div id="nomeProdutoDisplay"></div>
-        <div id="codigoProdutoError" class="error-message"></div>
-      </div>
+    
+    <div class="flex justify-between items-center mb-2">
+        <p id="nomeUsuarioDisplay" class="text-xs text-gray-600 cursor-pointer hover:text-blue-600 truncate max-w-[70%]">Carregando...</p>
+        <button id="alterarNomeBtn" class="text-xs text-indigo-600 hover:underline"><i class="fas fa-user-edit"></i> Alterar</button>
     </div>
 
+    <!-- Área de Produto -->
     <div class="form-group">
-        <span class="form-group-title">Tara e Pesagem</span>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
+      <div class="flex justify-between items-center mb-1">
+          <label for="codigoProduto" class="label-compact font-medium text-gray-700">CÓDIGO</label>
+          <div id="estoqueSistemaContainer" class="hidden bg-blue-50 px-2 py-0.5 rounded border border-blue-100 flex items-center">
+              <span class="estoque-label">SISTEMA:</span>
+              <span id="estoqueSistemaDisplay" class="text-xs font-bold text-blue-700">--</span>
+          </div>
+      </div>
+      
+      <input type="tel" inputmode="numeric" pattern="[0-9]*" id="codigoProduto" placeholder="Digite o código..."
+             class="mt-0 block w-full border border-gray-300 rounded input-compact" enterkeyhint="next">
+      <div id="nomeProdutoDisplay"></div>
+      <div id="codigoProdutoError" class="error-message"></div>
+    </div>
+
+    <!-- Área de Pesagem Compacta -->
+    <div class="form-group">
+        <div class="flex justify-between items-center">
+             <span class="form-group-title">TARA & PESO</span>
+             <span id="letraPoteSelecionado" class="text-xs text-blue-600 font-bold">(Nenhuma)</span>
+        </div>
+        
+        <!-- Botões de Tara (Imagens) -->
+        <div class="mb-2">
+            <div id="botoesTaraContainer" class="flex flex-wrap gap-1 items-center">
+                <span class="text-gray-400 text-xs">Carregando...</span>
+            </div>
+            <!-- Botão Nenhuma (Texto puro para economizar espaço visual) -->
+            <button class="tara-button tara-button-text mt-1" data-tara-kg="0" data-letra="Nenhuma">
+                <i class="fas fa-ban mr-1 text-xs"></i> Sem Pote
+            </button>
+        </div>
+
+        <!-- Grid de Inputs (2 colunas apertadas) -->
+        <div class="grid grid-cols-2 gap-2">
             <div>
-                <label for="pesoTaraKg" class="block text-sm font-medium text-gray-700">
-                    Peso da Tara (kg) <span id="letraPoteSelecionado" class="text-blue-600 font-semibold">(Nenhuma)</span>
-                </label>
+                <label for="pesoTaraKg" class="label-compact block font-medium text-gray-600">Tara (kg)</label>
                 <input type="text" inputmode="decimal" id="pesoTaraKg" placeholder="0.000"
-                        class="mt-1 block w-full border border-gray-300 p-2 rounded" enterkeyhint="next">
+                        class="block w-full border border-gray-300 rounded input-compact bg-gray-50" enterkeyhint="next">
                 <div id="pesoTaraKgError" class="error-message"></div>
             </div>
+            
             <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Tara Rápida (Potes)</label>
-                <div id="botoesTaraContainer" class="flex flex-wrap">
-                    <span class="text-gray-500 text-sm">Carregando potes...</span>
-                </div>
-                <button class="tara-button mt-2" data-tara-kg="0" data-letra="Nenhuma">Nenhuma <i class="fas fa-check ml-1 hidden"></i></button>
-            </div>
-            <div>
-                <label for="pesoComPoteKg" class="block text-sm font-medium text-gray-700">Peso COM POTE (kg)</label>
+                <label for="pesoComPoteKg" class="label-compact block font-medium text-gray-800">PESO C/ POTE</label>
                 <input type="text" inputmode="decimal" id="pesoComPoteKg" placeholder="0.000"
-                        class="mt-1 block w-full border border-gray-300 p-2 rounded" enterkeyhint="next">
+                        class="block w-full border border-gray-400 rounded input-compact font-bold text-gray-900" enterkeyhint="next">
                 <div id="pesoComPoteKgError" class="error-message"></div>
             </div>
-            <div>
-                <label for="pesoExtraKg" class="block text-sm font-medium text-gray-700">
-                    Peso Extra <strong class="uppercase font-bold text-amber-500">ESTOQUE</strong> (kg)
-                </label>
-                <input type="text" inputmode="decimal" id="pesoExtraKg" placeholder="0.000"
-                        class="mt-1 block w-full p-2 rounded input-neon-glow" enterkeyhint="go">
-                <p class="mt-1 text-xs text-gray-500">Opcional: Peso de pacotes fechados, etc.</p>
+            
+            <div class="col-span-2">
+                <div class="flex items-center gap-2">
+                    <div class="flex-grow">
+                        <label for="pesoExtraKg" class="label-compact block font-medium text-amber-600">PESO EXTRA / ESTOQUE (kg)</label>
+                        <input type="text" inputmode="decimal" id="pesoExtraKg" placeholder="0.000"
+                                class="block w-full rounded input-compact input-neon-glow" enterkeyhint="go">
+                    </div>
+                    <div class="text-[0.65rem] text-gray-400 w-24 leading-tight pt-3">
+                        Peso de pacotes fechados ou estoque
+                    </div>
+                </div>
                 <div id="pesoExtraKgError" class="error-message"></div>
             </div>
         </div>
     </div>
 
-    <button id="registrarItemBtn"
-            class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded disabled:opacity-50 mb-2">
-       <i class="fas fa-plus mr-2"></i> <span id="textoBotaoRegistrar">Registrar Item Localmente</span>
-    </button>
-    <div id="calculoPesoLiquidoDisplay" class="text-sm text-center text-gray-600 mb-4 h-5"></div>
+    <!-- Ações Principais -->
+    <div class="flex gap-2 mb-1">
+        <button id="limparSessaoLocalBtn" class="bg-gray-400 hover:bg-gray-500 text-white py-2 px-3 rounded text-sm w-12 flex items-center justify-center" title="Limpar">
+             <i class="fas fa-trash-alt"></i>
+        </button>
+        <button id="registrarItemBtn"
+                class="flex-grow bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded disabled:opacity-50 text-base font-bold shadow-sm">
+           <i class="fas fa-plus mr-1"></i> <span id="textoBotaoRegistrar">REGISTRAR</span>
+        </button>
+    </div>
+    
+    <div id="calculoPesoLiquidoDisplay" class="text-xs text-center text-gray-500 mb-2 h-4 font-mono"></div>
 
-    <div id="statusEnvio" class="status-base mt-4">
+    <div id="statusEnvio" class="status-base">
         <span id="statusMensagem"></span>
         <div id="progressBarContainer">
             <div id="progressBar"></div>
         </div>
     </div>
 
-    <div class="mt-8">
-      <div class="flex justify-between items-center mb-3">
-        <h2 class="text-xl font-semibold text-gray-800">Itens Registrados Localmente</h2> <span class="text-sm text-gray-600" id="totalizadorPendentes">Pendentes: 0 | P.Líq.: 0.000 kg</span> </div>
-      <div class="overflow-x-auto">
-        <table id="listaItensTable" class="min-w-full border-collapse border border-gray-300">
-          <thead>
-            <tr class="bg-gray-200">
-              <th class="px-2 py-1 text-left">Código</th>
-              <th class="px-2 py-1 text-right">P.Líq.Total</th>
-              <th class="px-2 py-1 text-right">Tara (Pote)</th>
-              <th class="px-2 py-1 text-center">Hora</th>
-              <th class="px-2 py-1 text-center">Ações</th>
+    <!-- Lista -->
+    <div class="mt-4 border-t pt-2">
+      <div class="flex justify-between items-end mb-2">
+        <h2 class="text-sm font-semibold text-gray-700 uppercase">Registrados</h2> 
+        <span class="text-xs text-gray-600 font-mono" id="totalizadorPendentes">Pend: 0 | 0.000 kg</span> 
+      </div>
+      
+      <div class="overflow-x-auto max-h-[250px] overflow-y-auto border border-gray-200 rounded">
+        <table id="listaItensTable" class="min-w-full border-collapse">
+          <thead class="sticky top-0 bg-gray-100 shadow-sm">
+            <tr>
+              <th class="w-16">Cód</th>
+              <th>Liq.</th>
+              <th>Tara</th>
+              <th class="w-12">Hora</th>
+              <th class="w-16">Ação</th>
             </tr>
           </thead>
-          <tbody id="listaItensBody">
-            <tr><td colspan="5" class="text-center text-gray-500 py-4">Nenhum item registrado localmente.</td></tr>
+          <tbody id="listaItensBody" class="bg-white">
+            <tr><td colspan="5" class="text-center text-gray-400 py-4 text-xs">Lista vazia.</td></tr>
           </tbody>
         </table>
       </div>
-    </div>
-
-    <div class="flex flex-col sm:flex-row gap-3 mt-6">
-       <button id="limparSessaoLocalBtn"
-              class="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-3 rounded text-sm sm:text-base">
-         <i class="fas fa-trash-alt mr-1 sm:mr-2"></i> Limpar Lista Local
-      </button>
+      
       <button id="enviarTodosBtn"
-        class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded disabled:opacity-50 text-sm sm:text-base">
-         <i class="fas fa-cloud-upload-alt mr-1 sm:mr-2"></i><span id="textoBotaoEnviar">Enviar Pendentes</span>
-      </button>
-      <button id="alterarNomeBtn"
-              class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-3 rounded text-sm sm:text-base">
-        <i class="fas fa-user-edit mr-1 sm:mr-2"></i> Alterar Nome
+        class="w-full mt-3 bg-blue-600 hover:bg-blue-700 text-white py-3 px-3 rounded disabled:opacity-50 text-sm font-bold shadow">
+         <i class="fas fa-cloud-upload-alt mr-2"></i><span id="textoBotaoEnviar">ENVIAR PENDENTES</span>
       </button>
     </div>
   </div>
@@ -215,23 +285,20 @@
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js', { scope:'./' })
-        .then(reg => console.log('Service Worker registrado com sucesso:', reg))
-        .catch(err => console.error('Erro ao registrar Service Worker:', err));
+        .then(reg => console.log('SW registrado.'))
+        .catch(err => console.error('Erro SW:', err));
     }
+    // Lógica simples do botão de instalar
     let deferredPrompt;
     const installButton = document.getElementById('installPwaButton');
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault(); deferredPrompt = e; installButton.style.display = 'inline-block';
-      installButton.addEventListener('click', (e) => {
+      installButton.addEventListener('click', () => {
         installButton.style.display = 'none'; deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') console.log('Usuário aceitou instalar o PWA');
-          else console.log('Usuário recusou instalar o PWA');
-          deferredPrompt = null;
-        });
+        deferredPrompt.userChoice.then((res) => { deferredPrompt = null; });
       });
     });
-    window.addEventListener('appinstalled', (evt) => { console.log('PWA foi instalado.'); installButton.style.display = 'none';});
+    window.addEventListener('appinstalled', () => { installButton.style.display = 'none';});
   </script>
 </body>
 </html>
