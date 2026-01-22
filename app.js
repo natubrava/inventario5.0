@@ -1,7 +1,7 @@
 /* ========= CONFIG ========= */
 const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwy_aKGV9xAd9sBJRGG66LohrR3s0l_DbDCnOveCEHaE_RGjNqgTHbkiBX8ngks3-nO/exec';
-const APP_VERSION = 'v14.0 - Potes com Fotos';
+const APP_VERSION = 'v14.1 - Fix Atualização Tara'; // Atualizei a versão aqui
 const ENVIO_DELAY_MS = 500;
 
 // Configuração para busca de estoque
@@ -93,6 +93,7 @@ function setupEventListeners() {
   });
 
   codigoInp.addEventListener('blur', buscaTaraAutomatica);
+  // Adicionado delay curto no input para garantir atualização suave sem travar digitação rápida
   codigoInp.addEventListener('input', () => {
       const codigo = codigoInp.value.trim();
       atualizaDisplayEstoque(codigo);
@@ -365,7 +366,7 @@ function selecionaBotaoNenhuma() {
     atualizaDisplayCalculoPeso();
 }
 
-/* ---------- Busca Tara Automática ---------- */
+/* ---------- Busca Tara Automática (CORRIGIDA) ---------- */
 function buscaTaraAutomatica() {
   const codigo = codigoInp.value.trim(); 
   limpaErroCampo(codigoProdutoError);
@@ -377,28 +378,36 @@ function buscaTaraAutomatica() {
   if (produto) {
     nomeDiv.textContent = produto.Nome || 'Produto sem nome';
     
-    // Se o campo de tara estiver vazio OU se estiver marcado "Nenhuma" (e não for manual intencional)
-    if (!taraInp.value.trim() || letraPoteSel === 'Nenhuma' || pesoComPoteInp.classList.contains('input-auto-filled')) {
+    // CORREÇÃO CRÍTICA AQUI:
+    // A lógica anterior impedia atualização se já houvesse tara.
+    // Agora, PRIORIZAMOS o cadastro do produto. Se o produto tem Pote definido, usamos ele.
+    
+    if (produto.tara !== undefined && produto.tara !== null && produto.letra && produto.letra !== "Nenhuma") {
+        // Tem letra cadastrada e tara válida: IMPÕE a tara do produto
+        taraInp.value = parseFloat(produto.tara).toFixed(3); 
+        desmarcaBotoesTara();
         
-        if (produto.tara !== undefined && produto.tara !== null && produto.letra && produto.letra !== "Nenhuma") {
-            // Tem letra cadastrada
-            taraInp.value = parseFloat(produto.tara).toFixed(3); 
-            desmarcaBotoesTara();
-            
-            // Tenta achar o botão da imagem
-            const btnLetra = document.querySelector(`.tara-button[data-letra="${produto.letra}"]`);
-            if (btnLetra) { 
-                btnLetra.classList.add('selected'); 
-                letraPoteSel = produto.letra; 
-                spanLetra.textContent = `(${produto.letra})`; 
-            } else { 
-                letraPoteSel = 'Manual'; 
-                spanLetra.textContent = '(Manual)'; 
-            }
-        } else {
-            // Não tem letra, assume "Nenhuma"
-            selecionaBotaoNenhuma();
-            if (!produto.letra || produto.tara === 0 || produto.tara === null) {
+        // Tenta achar o botão da imagem e selecionar
+        const btnLetra = document.querySelector(`.tara-button[data-letra="${produto.letra}"]`);
+        if (btnLetra) { 
+            btnLetra.classList.add('selected'); 
+            letraPoteSel = produto.letra; 
+            spanLetra.textContent = `(${produto.letra})`; 
+        } else { 
+            // Caso raro: tem letra no JSON mas não gerou botão (ex: letra nova sem reload)
+            letraPoteSel = 'Manual'; 
+            spanLetra.textContent = '(Manual)'; 
+        }
+    } else {
+        // O produto NÃO tem Pote definido no JSON (ex: produtos de prateleira/pacote)
+        // Nesses casos, verificamos se devemos limpar ou manter o manual.
+        // Se o produto explicitamente diz "tara: 0" ou letra vazia, sugerimos "Nenhuma".
+        
+        // Se o usuário NÃO digitou nada manualmente ainda, ou se estava em "Nenhuma", forçamos "Nenhuma"
+        if (!taraInp.value.trim() || letraPoteSel === 'Nenhuma' || letraPoteSel !== 'Manual') {
+             selecionaBotaoNenhuma();
+             // Auto-preenche peso se for zero
+             if (!produto.letra || produto.tara === 0 || produto.tara === null) {
                  pesoComPoteInp.value = '0.000'; 
                  pesoComPoteInp.classList.add('input-auto-filled');
             }
