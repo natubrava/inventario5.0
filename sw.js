@@ -1,12 +1,12 @@
 // Incremente a versão do cache sempre que arquivos importantes (app.js, index.html) forem alterados.
-const CACHE_NAME = 'inventario-granel-cache-v14'; // ATUALIZADO V14 (Com imagens)
+const CACHE_NAME = 'inventario-granel-cache-v14.1'; // ATUALIZADO V14.1 (Fix Lógica Tara)
 const urlsToCache = [
   './',
   './index.html',
   './app.js',
   './manifest.json',
   './potes.json',
-  // Imagens dos Potes (Adicionadas ao cache)
+  // Imagens dos Potes
   './pote_A.png',
   './pote_B.png',
   './pote_C.png',
@@ -18,11 +18,11 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', event => {
-  console.log('[Service Worker] Instalando v14...');
+  console.log('[Service Worker] Instalando v14.1...');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('[Service Worker] Fazendo cache dos arquivos da aplicação v14');
+        console.log('[Service Worker] Fazendo cache dos arquivos da aplicação v14.1');
         const networkRequests = urlsToCache.map(url => fetch(url, { cache: 'reload' }));
         return Promise.all(networkRequests)
           .then(responses => {
@@ -39,16 +39,16 @@ self.addEventListener('install', event => {
       })
       .then(() => {
         self.skipWaiting();
-        console.log('[Service Worker] Instalação completa v14, skipWaiting chamado.');
+        console.log('[Service Worker] Instalação completa v14.1, skipWaiting chamado.');
       })
       .catch(error => {
-        console.error('[Service Worker] Falha na instalação do cache v14:', error);
+        console.error('[Service Worker] Falha na instalação do cache v14.1:', error);
       })
   );
 });
 
 self.addEventListener('activate', event => {
-  console.log('[Service Worker] Ativando v14...');
+  console.log('[Service Worker] Ativando v14.1...');
   event.waitUntil(
     caches.keys().then(keyList => {
       return Promise.all(keyList.map(key => {
@@ -58,7 +58,7 @@ self.addEventListener('activate', event => {
         }
       }));
     }).then(() => {
-      console.log('[Service Worker] Cache limpo, ativado e pronto para controlar clientes v14.');
+      console.log('[Service Worker] Cache limpo, ativado e pronto para controlar clientes v14.1.');
       return self.clients.claim();
     })
   );
