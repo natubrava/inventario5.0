@@ -587,7 +587,7 @@ function handleRegistrarOuSalvarItem() {
     } else { 
         itemData.id = Date.now(); 
         itens.push(itemData); 
-        mostraStatus(mensagemStatus, 'success', 4000); // 4 segundos para ler
+        mostraStatus(mensagemStatus, 'success', 8000); // 8 segundos para ler
     }
     salvaLocais(); limparFormulario(); codigoInp.focus(); updateBotaoRegistrar();
 }
@@ -769,3 +769,4 @@ function mostraStatus(mensagem, tipo = 'info', duracaoMs = 4000, progresso = -1)
       }, duracaoMs); 
   }
 }
+
