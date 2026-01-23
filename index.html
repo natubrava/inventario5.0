@@ -21,15 +21,6 @@
     .flash-success{animation:flash .5s}
     @keyframes flash-error{0%,100%{background:initial}50%{background:#fecaca}}
     .flash-error{animation:flash-error .7s}
-    
-    /* Pulso Suave Customizado */
-    @keyframes softPulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.6; }
-    }
-    .soft-pulse {
-        animation: softPulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
 
     /* Tabela Compacta */
     #listaItensTable{width:100%;table-layout:auto;font-size:.85rem}
@@ -250,11 +241,7 @@
         </button>
     </div>
     
-    <!-- Display de Peso e Diferença (Lado a Lado) -->
-    <div class="flex justify-center items-center gap-4 mb-2 min-h-[1rem]">
-        <div id="calculoPesoLiquidoDisplay" class="text-xs text-gray-500 font-mono"></div>
-        <div id="diferencaEstoqueDisplay" class="text-xs font-bold font-mono hidden"></div>
-    </div>
+    <div id="calculoPesoLiquidoDisplay" class="text-xs text-center text-gray-500 mb-2 h-4 font-mono"></div>
 
     <div id="statusEnvio" class="status-base">
         <span id="statusMensagem"></span>
