@@ -1,7 +1,7 @@
 /* ========= CONFIG ========= */
 const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwy_aKGV9xAd9sBJRGG66LohrR3s0l_DbDCnOveCEHaE_RGjNqgTHbkiBX8ngks3-nO/exec';
-const APP_VERSION = 'v14.1 - Fix Atualização Tara'; // Atualizei a versão aqui
+const APP_VERSION = 'v14.2 - Fix Zero Permitido'; // Atualizei a versão aqui
 const ENVIO_DELAY_MS = 500;
 
 // Configuração para busca de estoque
@@ -514,13 +514,16 @@ function handleRegistrarOuSalvarItem() {
     }
     
     const pesoLiquidoPote = pesoComPote - taraCalculo; 
-    const pesoLiquidoTotal = +(pesoLiquidoPote + pesoExtra).toFixed(3);
+    // Usar let para permitir ajuste
+    let pesoLiquidoTotal = +(pesoLiquidoPote + pesoExtra).toFixed(3);
     
-    if (pesoLiquidoTotal <= 0 && !(pesoComPote === 0 && pesoExtra > 0 && taraCalculo === 0)) {
-        if (!(pesoComPote === 0 && pesoExtra > 0 && taraCalculo === 0 && pesoLiquidoTotal === pesoExtra)) {
-            mostraMensagemErroCampo(calculoPesoLiquidoDisplay, 'Peso zerado/negativo.'); return;
-        }
+    // MODIFICAÇÃO PEDIDA: Se der negativo, assume 0 para registrar falta de estoque.
+    // Antes bloqueava se fosse <= 0.
+    if (pesoLiquidoTotal < 0) {
+        pesoLiquidoTotal = 0;
     }
+    
+    // REMOVIDO BLOQUEIO DE ZERO/NEGATIVO
     
     const produtoInfo = MAPA[codigo] || {};
     const itemData = {
