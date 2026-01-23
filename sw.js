@@ -1,5 +1,5 @@
 // Incremente a versão do cache sempre que arquivos importantes (app.js, index.html) forem alterados.
-const CACHE_NAME = 'inventario-granel-cache-v14.1'; // ATUALIZADO V14.1 (Fix Lógica Tara)
+const CACHE_NAME = 'inventario-granel-cache-v14.2'; // ATUALIZADO V14.2 (Fix Zero Permitido)
 const urlsToCache = [
   './',
   './index.html',
@@ -18,11 +18,11 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', event => {
-  console.log('[Service Worker] Instalando v14.1...');
+  console.log('[Service Worker] Instalando v14.2...');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('[Service Worker] Fazendo cache dos arquivos da aplicação v14.1');
+        console.log('[Service Worker] Fazendo cache dos arquivos da aplicação v14.2');
         const networkRequests = urlsToCache.map(url => fetch(url, { cache: 'reload' }));
         return Promise.all(networkRequests)
           .then(responses => {
@@ -39,16 +39,16 @@ self.addEventListener('install', event => {
       })
       .then(() => {
         self.skipWaiting();
-        console.log('[Service Worker] Instalação completa v14.1, skipWaiting chamado.');
+        console.log('[Service Worker] Instalação completa v14.2, skipWaiting chamado.');
       })
       .catch(error => {
-        console.error('[Service Worker] Falha na instalação do cache v14.1:', error);
+        console.error('[Service Worker] Falha na instalação do cache v14.2:', error);
       })
   );
 });
 
 self.addEventListener('activate', event => {
-  console.log('[Service Worker] Ativando v14.1...');
+  console.log('[Service Worker] Ativando v14.2...');
   event.waitUntil(
     caches.keys().then(keyList => {
       return Promise.all(keyList.map(key => {
@@ -58,7 +58,7 @@ self.addEventListener('activate', event => {
         }
       }));
     }).then(() => {
-      console.log('[Service Worker] Cache limpo, ativado e pronto para controlar clientes v14.1.');
+      console.log('[Service Worker] Cache limpo, ativado e pronto para controlar clientes v14.2.');
       return self.clients.claim();
     })
   );
