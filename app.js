@@ -1,7 +1,7 @@
 /* ========= CONFIG ========= */
 const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwy_aKGV9xAd9sBJRGG66LohrR3s0l_DbDCnOveCEHaE_RGjNqgTHbkiBX8ngks3-nO/exec';
-const APP_VERSION = 'v14.2 - Fix Zero Permitido'; // Atualizei a versão aqui
+const APP_VERSION = 'v14.3 - Comparativo de Estoque'; // Atualizado
 const ENVIO_DELAY_MS = 500;
 
 // Configuração para busca de estoque
@@ -82,7 +82,8 @@ function setupEventListeners() {
   [codigoInp, taraInp, pesoComPoteInp, pesoExtraInp].forEach(inp => {
     inp.addEventListener('input', () => {
       limpaErroCampo(inp.id + 'Error');
-      if (inp === pesoComPoteInp || inp === taraInp || inp === pesoExtraInp) {
+      // Atualiza o cálculo sempre que qualquer campo muda
+      if (inp === pesoComPoteInp || inp === taraInp || inp === pesoExtraInp || inp === codigoInp) {
         atualizaDisplayCalculoPeso();
       }
       updateBotaoRegistrar();
@@ -97,6 +98,8 @@ function setupEventListeners() {
   codigoInp.addEventListener('input', () => {
       const codigo = codigoInp.value.trim();
       atualizaDisplayEstoque(codigo);
+      // Chama o calculo aqui também caso o código mude e já tenhamos peso inserido
+      atualizaDisplayCalculoPeso(); 
   });
   
   // Delegação de eventos para os botões de imagem
@@ -145,7 +148,10 @@ async function carregarEstoqueDoSistema() {
                 isGranel: isGranel
             };
         });
-        if(codigoInp.value) atualizaDisplayEstoque(codigoInp.value);
+        if(codigoInp.value) {
+            atualizaDisplayEstoque(codigoInp.value);
+            atualizaDisplayCalculoPeso(); // Recalcula caso o estoque chegue depois
+        }
     } catch (error) {
         console.error("Erro estoque:", error);
     }
@@ -484,21 +490,57 @@ function validaCamposFormulario() {
     return isValid;
 }
 
-/* ---------- Cálculo Peso Líquido ---------- */
+/* ---------- Cálculo Peso Líquido (Com Diferença) ---------- */
 function atualizaDisplayCalculoPeso() {
     const tara = parseFloat(taraInp.value.replace(',', '.')) || 0; 
     const pesoComPote = parseFloat(pesoComPoteInp.value.replace(',', '.')) || 0; 
     const pesoExtra = parseFloat(pesoExtraInp.value.replace(',', '.')) || 0;
     
     if (pesoComPoteInp.value.trim() === "" && pesoExtraInp.value.trim() === "") { 
-        calculoPesoLiquidoDisplay.textContent = ""; return; 
+        calculoPesoLiquidoDisplay.textContent = ""; 
+        return; 
     }
+    
     const pesoLiquidoPote = pesoComPote - tara; 
     const pesoLiquidoTotal = +(pesoLiquidoPote + pesoExtra).toFixed(3);
-    calculoPesoLiquidoDisplay.textContent = `Líquido: ${pesoLiquidoTotal.toFixed(3)} kg`;
+    
+    let htmlContent = `Líquido: <span class="font-bold text-gray-800">${pesoLiquidoTotal.toFixed(3)} kg</span>`;
+
+    // LÓGICA DE DIFERENÇA DO SISTEMA
+    const codigo = codigoInp.value.trim();
+    if (codigo && MAPA_ESTOQUE_SISTEMA[codigo]) {
+        const estoqueSistema = MAPA_ESTOQUE_SISTEMA[codigo].estoque;
+        const diferenca = pesoLiquidoTotal - estoqueSistema;
+        const difAbs = Math.abs(diferenca);
+        
+        let corClasse = "text-gray-500"; // Neutro
+        let animacaoClasse = "";
+        let sinal = diferenca > 0 ? "+" : "";
+
+        // Tolerância pequena para erro de arredondamento (ex: 0.005)
+        if (difAbs > 0.005) {
+            if (diferenca < 0) {
+                corClasse = "text-red-600"; // Falta estoque físico em relação ao sistema
+            } else {
+                corClasse = "text-blue-600"; // Sobra estoque físico
+            }
+        } else {
+            corClasse = "text-green-600"; // Exato (ou muito perto)
+        }
+
+        // Animação cintilante se a diferença for maior que 0.300
+        if (difAbs > 0.300) {
+            animacaoClasse = "animate-soft-pulse";
+        }
+
+        // Adiciona ao HTML
+        htmlContent += `<span class="ml-2 text-[0.7rem] ${corClasse} ${animacaoClasse} font-bold">(Dif: ${sinal}${diferenca.toFixed(3)})</span>`;
+    }
+
+    calculoPesoLiquidoDisplay.innerHTML = htmlContent;
 }
 
-/* ---------- Registrar/Salvar ---------- */
+/* ---------- Registrar/Salvar (Com Feedback de Diferença) ---------- */
 function handleRegistrarOuSalvarItem() {
     if (!validaCamposFormulario()) { mostraStatus('Erro no formulário.', 'error'); return; }
     const codigo = codigoInp.value.trim(); 
@@ -514,16 +556,21 @@ function handleRegistrarOuSalvarItem() {
     }
     
     const pesoLiquidoPote = pesoComPote - taraCalculo; 
-    // Usar let para permitir ajuste
     let pesoLiquidoTotal = +(pesoLiquidoPote + pesoExtra).toFixed(3);
     
-    // MODIFICAÇÃO PEDIDA: Se der negativo, assume 0 para registrar falta de estoque.
-    // Antes bloqueava se fosse <= 0.
-    if (pesoLiquidoTotal < 0) {
-        pesoLiquidoTotal = 0;
+    // Se der negativo, assume 0 (ajuste pedido anteriormente)
+    if (pesoLiquidoTotal < 0) pesoLiquidoTotal = 0;
+
+    // --- CAPTURA A DIFERENÇA ANTES DE LIMPAR ---
+    let mensagemStatus = 'Registrado!';
+    if (codigo && MAPA_ESTOQUE_SISTEMA[codigo]) {
+        const estoqueSistema = MAPA_ESTOQUE_SISTEMA[codigo].estoque;
+        const diferenca = pesoLiquidoTotal - estoqueSistema;
+        const sinal = diferenca > 0 ? "+" : "";
+        // Adiciona a diferença na mensagem de sucesso para visualização rápida pós-Enter
+        mensagemStatus = `Registrado! (Dif: ${sinal}${diferenca.toFixed(3)})`;
     }
-    
-    // REMOVIDO BLOQUEIO DE ZERO/NEGATIVO
+    // -------------------------------------------
     
     const produtoInfo = MAPA[codigo] || {};
     const itemData = {
@@ -540,7 +587,7 @@ function handleRegistrarOuSalvarItem() {
     } else { 
         itemData.id = Date.now(); 
         itens.push(itemData); 
-        mostraStatus('Registrado!', 'success'); 
+        mostraStatus(mensagemStatus, 'success', 4000); // 4 segundos para ler
     }
     salvaLocais(); limparFormulario(); codigoInp.focus(); updateBotaoRegistrar();
 }
